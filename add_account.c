@@ -1,3 +1,4 @@
+#include "add_account.h"
 #include <stdio.h>
 #include <time.h>
 #include <math.h>
@@ -117,9 +118,9 @@ int ft_fgets(char *chaine, int longueur)
 	}
 }
 
-
 void add_account(void)
 {
+	system("sudo chattr -i mdp.txt.aes"); // Autorisation pour ecrire dans le fichier
 	FILE *fichier = fopen("mdp.txt", "a+");
 	char account[MAX];
 
@@ -131,4 +132,5 @@ void add_account(void)
 	fclose(fichier);
 
 	genMDP();
+	aescrypt();
 }

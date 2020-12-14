@@ -1,5 +1,5 @@
-#ifndef _MAIN_H_
-#define _MAIN_H_
+#ifndef _ADD_ACCOUNT_H_
+#define _ADD_ACCOUNT_H_
 
 #include <stdio.h>
 #include <time.h>
@@ -8,6 +8,7 @@
 #include <string.h>
 #define MAX 15
 
+void aescrypt(void);
 void add_account(void);
 int ft_fgets(char *chaine, int longueur);
 void    genMDP(void);

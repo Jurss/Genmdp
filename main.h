@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+void aescrypt(void);
 void add_account(void);
 int ft_fgets(char *chaine, int longueur);
 void    genMDP(void);
