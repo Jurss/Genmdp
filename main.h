@@ -5,6 +5,8 @@
 #include <stdlib.h>
 
 void aescrypt(void);
+void aesdecrypt(void);
+void look_mdp(void);
 void add_account(void);
 int ft_fgets(char *chaine, int longueur);
 void    genMDP(void);

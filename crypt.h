@@ -4,5 +4,6 @@
 #include <stdlib.h>
 
 void aescrypt(void);
+void aesdecrypt(void);
 
 #endif
