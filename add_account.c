@@ -120,15 +120,16 @@ int ft_fgets(char *chaine, int longueur)
 
 void add_account(void)
 {
-	system("sudo chattr -i mdp.txt.aes"); // Autorisation pour ecrire dans le fichier
-	system("aescrypt -d -p apples mdp.txt.aes");
-	system("rm mdp.txt.aes");
-
 	FILE *fichier = fopen("mdp.txt", "a+");
 	char account[MAX];
 
 	printf("Pour Quelle Site/Appli créé un compte ?(15 caractere max)");
 	ft_fgets(account, MAX);
+
+	system("sudo chattr -i mdp.txt.aes"); // Autorisation pour ecrire dans le fichier
+        system("aescrypt -d -p apples mdp.txt.aes");
+        system("rm mdp.txt.aes");
+
 	fputs(account, fichier);
 	fputs(" : ", fichier);
 

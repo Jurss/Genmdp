@@ -7,4 +7,5 @@
 void look_mdp(void);
 void viderBuffer(void);
 void aesdecrypt(void);
+void aescrypt(void);
 #endif
