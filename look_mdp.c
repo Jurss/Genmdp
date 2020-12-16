@@ -9,6 +9,7 @@ void look_mdp(void)
 	if (c == '1')
 	{
 		viderBuffer();
+		
 
 	}
 	else if (c == '2')

@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+int master(char *ag);
 void aescrypt(void);
 void aesdecrypt(void);
 void look_mdp(void);

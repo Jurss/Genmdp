@@ -127,7 +127,7 @@ void add_account(void)
 	ft_fgets(account, MAX);
 
 	system("sudo chattr -i mdp.txt.aes"); // Autorisation pour ecrire dans le fichier
-        system("aescrypt -d -p apples mdp.txt.aes");
+        system("aescrypt -d -p CeDSoDdISbtAuk mdp.txt.aes");
         system("rm mdp.txt.aes");
 
 	fputs(account, fichier);
