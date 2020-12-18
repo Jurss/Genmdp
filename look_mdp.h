@@ -5,6 +5,7 @@
 #include <stdio.h>
 #include <string.h>
 
+void clear(void);
 int ft_fgets(char *chaine, int longueur);
 void look_mdp(void);
 void viderBuffer(void);

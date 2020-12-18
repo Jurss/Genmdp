@@ -10,6 +10,8 @@ void look_mdp(void)
 	{
 		char want[15];
 		viderBuffer();
+		
+		clear();
 
 		printf("Pour quel compte ?\n");
 		ft_fgets(want, 15);
@@ -21,7 +23,7 @@ void look_mdp(void)
 		viderBuffer();
 		system("sudo chattr -i mdp.txt.aes");
  		aesdecrypt();
-		
+		clear();
 		FILE *fichier = fopen("mdp.txt","r");
 		
 		system("cat mdp.txt");
