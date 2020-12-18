@@ -10,8 +10,10 @@ int main(int ac, char *ag[])
 	if (master(ag[1]) != 1)
 		return 0;
 	char c;
-	printf("1. Cree un Nouveau MDP \n2. Obtenir un de vos MDP\n");
+	
+	printf("1. Cree un Nouveau MDP \n2. Obtenir un de vos MDP\n3.Supprimer un mot de passe");
 	c = fgetc(stdin);
+	
 	if (c == '1')
 	{
 		viderBuffer();
@@ -21,6 +23,11 @@ int main(int ac, char *ag[])
 	{
 		viderBuffer();
 		look_mdp();
+	}
+	else if (c == '3')
+	{
+		viderBuffer();
+		del_mdp();
 	}
 	return 0;
 }

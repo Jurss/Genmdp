@@ -38,7 +38,7 @@ int wanted_pass(char *rec)
         char line[25];
         char wanted[25];
         int len;
-
+	int i = 0;
         while (fgets(line,sizeof line, compte))                 //recherche rec
         {
                 if (strstr(line, rec))
@@ -46,7 +46,11 @@ int wanted_pass(char *rec)
                         len = strlen(line);                     //
                         fseek(compte, -len, SEEK_CUR);          //
                         fgets(wanted, sizeof wanted, compte);   //reviens au debut de la ligne
-                        printf("%s", wanted);                   //et l'affiche
+                        while (wanted[i] != '\n')
+			{
+				wanted[i] = '\0';
+				i++;
+			}			//et l'affiche
                         break;                                  //
                 }
 
